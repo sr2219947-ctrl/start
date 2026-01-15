@@ -39,3 +39,34 @@ button:hover {
     margin-top: 15px;
     font-size: 16px;
 }
+/* Full page center */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+  gap: 20px;
+}
+
+/* Weather card */
+.weather-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Link at bottom */
+.other-project a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #004aad;
+}
+
+.other-project a:hover {
+  text-decoration: underline;
+}
+
