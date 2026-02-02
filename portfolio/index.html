@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio Website</title>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <h1><strong>Sakshi </strong> Rana</h1>
+      </div>
+
+      <div class="links">
+        <a href="#services">Skills</a>
+        <a href="#works">projects </a>
+        <a href="#notes">notes </a>
+        <a href="#contact">Contacts</a>
+      </div>
+
+      <div class="social-links">
+        <a class="Linkdin" href="https://www.linkedin.com/in/sakshi-rana-3b268336a/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-x-linkdin "></i>
+          <label>Linkdin </label>
+        </a>
+
+        <a class="github" href="https://github.com/sr2219947-ctrl" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+          <label>Github</label>
+        </a>
+
+        <a class="mail" href="sr2219947@gmail.com" title="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="content">
+      <div class="heading">
+        <h3 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="200">Front-end Developer</h3>
+
+        <h1 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="400">
+          Turning Concepts  <span>into working  Code</span>
+        </h1>
+
+        <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="600">
+          I am a Computer Science student learning web development by building real projects
+          using HTML, CSS, JavaScript and basic backend concepts.
+        </p>
+        <button data-aos="fade-right" data-aos-duration="1100" data-aos-delay="800"
+          onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+          Contact Me 
+        </button>
+      </div>
+
+      <div class="image" data-aos="fade-left" data-aos-duration="1500">
+        <img src="profile.jpg" alt="Profile Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="quality">
+    <div class="experience">
+      <h1>Student</h1>
+      <label>Web development Learner</label>
+    </div>
+
+    <div class="experience gap">
+      <h1>+2</h1>
+      <label>ACADEMIC & PRACTICE PROJECTS</label>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <section id="skills" class="section-block">
+    <h2 data-aos="fade-up" data-aos-duration="900">Skills</h2>
+
+    <div class="cards" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+      <div class="card">
+        <h3>Html and CSS</h3>
+        <p>Creating responsive layouts, forms, and portfolio websites</p>
+      </div>
+
+      <div class="card">
+        <h3>JavaScript (Basics)</h3>
+        <p>DOM manipulation, arrays, objects, functions and events.</p>
+      </div>
+
+      <div class="card">
+        <h3>Git and Git hub</h3>
+        <p>Version control, repositories, commits and hosting project</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- projects  -->
+  <section id="works" class="section-block">
+    <h2 data-aos="fade-up" data-aos-duration="900">my projects </h2>
+
+    <div class="cards" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio with AOS animations and responsive design.</p>
+        <a class="btn-link" href="" target="_blank" rel="noopener">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>To-Do List App</h3>
+        <p>A JavaScript based task manager using DOM manipulation.</p>
+        <a class="btn-link" href="#" target="_blank" rel="noopener">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Calculator</h3>
+        <p>Basic calculator using HTML, CSS and JavaScript logic..</p>
+        <a class="btn-link" href="#" target="_blank" rel="noopener">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES / BLOG -->
+  <section id="notes" class="section-block">
+    <h2 data-aos="fade-up" data-aos-duration="900">Notes</h2>
+
+    <div class="cards" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+      <div class="card">
+        <h3>How I build responsive websites</h3>
+        <p>My process to make websites mobile-friendly using CSS and layout techniques.</p>
+        <a class="btn-link" href="#" target="_blank" rel="noopener">Read</a>
+      </div>
+
+      <div class="card">
+        <h3>CSS Grid vs Flexbox</h3>
+        <p>When to use Grid and when Flexbox is enough.</p>
+        <a class="btn-link" href="#" target="_blank" rel="noopener">Read</a>
+      </div>
+
+      <div class="card">
+        <h3>JavaScript DOM Basics/ Array Methods</h3>
+        <p>Simple DOM examples to understand events and selectors/Practiced map, filter and reduce with real examples..</p>
+        <a class="btn-link" href="#" target="_blank" rel="noopener">Read</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-block">
+    <h2 data-aos="fade-up" data-aos-duration="900">Contact</h2>
+
+    <div class="contact-wrap" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+      <div class="contact-info">
+        <p><i class="fa-regular fa-envelope"></i> sr2219947@gmail.com</p>
+        <p><i class="fa-brands fa-github"></i> github.com/username</p>
+        <p><i class="fa-brands fa-x-twitter"></i> Linkdin.com/username</p>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submitted (demo)');">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Sakshi Rana. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
