@@ -1,50 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Portfolio Website</title>
-
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Font Awesome Icons -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Sakshi Rana - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div id="progress"></div>
+  <canvas id="particles"></canvas>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
   <!-- NAVBAR -->
   <nav>
     <div class="container">
       <div class="logo">
-        <h1><strong>Sakshi </strong> Rana</h1>
+        <h1><strong>Sakshi</strong> Rana</h1>
       </div>
-
       <div class="links">
-        <a href="#services">Skills</a>
-        <a href="#works">projects </a>
-        <a href="#notes">notes </a>
-        <a href="#contact">Contacts</a>
+        <a href="#skills">Skills</a>
+        <a href="#works">Projects</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
       </div>
-
       <div class="social-links">
-        <a class="Linkdin" href="https://www.linkedin.com/in/sakshi-rana-3b268336a/" target="_blank" rel="noopener">
-          <i class="fa-brands fa-linkedin "></i>
-          <label>Linkdin </label>
-        </a>
-
-        <a class="github" href="https://github.com/sr2219947-ctrl" target="_blank" rel="noopener">
-          <i class="fa-brands fa-github"></i>
-          <label>Github</label>
-        </a>
-
-        <a class="mail" href="sr2219947@gmail.com" title="Email">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
+        <a href="https://www.linkedin.com/in/sakshi-rana-3b268336a/" target="_blank" rel="noopener"><i
+            class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/sr2219947-ctrl" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>
+          GitHub</a>
+        <a href="mailto:sr2219947@gmail.com"><i class="fa-regular fa-envelope"></i></a>
       </div>
     </div>
   </nav>
@@ -53,154 +40,220 @@
   <section id="home">
     <div class="content">
       <div class="heading">
-        <h3 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="200">Aspiring web Developer</h3>
-
-        <h1 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="400">
-          Turning Concepts  <span>into working  Code</span>
-        </h1>
-
-        <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="600">
-          I am a Computer Science student learning web development by building real projects
-          using HTML, CSS, JavaScript and basic backend concepts.
-        </p>
-        <button data-aos="fade-right" data-aos-duration="1100" data-aos-delay="800"
-          onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
-          Contact Me 
-        </button>
+        <h3>Aspiring Web Developer</h3>
+        <h1>Turning Concepts<br><span id="typed-text"></span><span class="typed-cursor">|</span></h1>
+        <p>I'm a Computer Science student crafting real projects with HTML, CSS, JavaScript and Node.js — learning by
+          building, one line at a time.</p>
+        <div class="btn-group">
+          <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+            Contact Me <i class="fa-solid fa-arrow-right" style="font-size:12px;margin-left:4px"></i>
+          </button>
+          <button class="btn-outline" onclick="document.querySelector('#works').scrollIntoView({behavior:'smooth'})">
+            View Projects
+          </button>
+        </div>
       </div>
-
-      <div class="image" data-aos="fade-left" data-aos-duration="1500">
-      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Profile Image" class="profile-img" />
+      <div class="avatar-wrap">
+        <div class="avatar-ring">
+          <img src="https://url-shortener.me/KQ3G" alt="Sakshi Rana" class="profile-img" />
+        </div>
+        <div class="avatar-badge"><span class="dot-live"></span> Open to opportunities</div>
+      </div>
     </div>
   </section>
 
   <!-- STATS -->
   <div class="quality">
-  <div class="experience">
-    <h1>MCA</h1>
-    <label>Master of Computer Applications</label>
+    <div class="experience">
+      <h1>MCA</h1>
+      <label>Master of Computer Applications</label>
+    </div>
+    <div class="experience">
+      <h1>BSc (Csc)</h1>
+      <label>Academic &amp; Practice Projects</label>
+    </div>
   </div>
 
-  <div class="experience gap">
-    <h1>Bsc(Csc) </h1>
-    <label>Academic & Practice Projects</label>
+  <!-- SKILLS -->
+  <section id="skills" class="section-block">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <span class="section-tag">Tech Stack</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card" data-level="90">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <h3>HTML</h3>
+        <p>Semantic structure, forms, accessibility</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar"></div>
+        </div>
+      </div>
+      <div class="skill-card" data-level="85">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <h3>CSS</h3>
+        <p>Flexbox, Grid, animations, responsive design</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar"></div>
+        </div>
+      </div>
+      <div class="skill-card" data-level="75">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript">
+        <h3>JavaScript</h3>
+        <p>DOM, events, promises, arrays, objects</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar"></div>
+        </div>
+      </div>
+      <div class="skill-card" data-level="60">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <h3>Node.js</h3>
+        <p>Basic backend, server concepts, APIs</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="works" class="section-block">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <span class="section-tag">What I've Built</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🍕</div>
+        <h3>Zomato Clone</h3>
+        <p>Food delivery UI with filtering, menu layout and responsive design built from scratch.</p>
+        <div class="card-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+            class="tag">JavaScript</span></div>
+        <a class="btn-link" href="https://sr2219947-ctrl.github.io/java-script/zomato/Project_zom" target="_blank"
+          rel="noopener">
+          View Project <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px"></i>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>Quote Generator</h3>
+        <p>Generates random inspirational quotes with a clean, minimal UI and smooth transitions.</p>
+        <div class="card-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+            class="tag">JavaScript</span></div>
+        <a class="btn-link" href="https://sr2219947-ctrl.github.io/java-script/11_Quotes/" target="_blank"
+          rel="noopener">
+          View Project <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px"></i>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏅</div>
+        <h3>Olympic Countdown</h3>
+        <p>Live countdown timer for the Olympic Games with animated display using HTML, CSS &amp; JS.</p>
+        <div class="card-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+            class="tag">JavaScript</span></div>
+        <a class="btn-link" href="https://sr2219947-ctrl.github.io/java-script/08_Olympic/" target="_blank"
+          rel="noopener">
+          View Project <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+<!-- NOTES -->
+<section id="notes" class="section-block">
+  <div class="section-header">
+    <h2>Notes</h2>
+    <span class="section-tag">My Learnings</span>
   </div>
-</div>
-
-  <!-- Skills -->
-
-<section id="skills" class="section-block">
-  <h2 data-aos="fade-up" data-aos-duration="900">Skills</h2>
-
-  <div class="cards" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="60">
-      <h3>HTML</h3>
-      <p>Semantic structure, forms, accessibility</p>
+  <div class="cards">
+    <div class="note-card" data-note="1">
+      <div class="note-number">01</div>
+      <h3>How I Build Responsive Websites</h3>
+      <p>My process to make websites mobile-friendly using CSS layout techniques and media queries.</p>
+      <a class="btn-link" href="#" onclick="openNote(event,1)">Read <i class="fa-solid fa-book-open" style="font-size:11px"></i></a>
     </div>
-
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="60">
-      <h3>CSS</h3>
-      <p>Responsive design, Flexbox, Grid, animations</p>
+    <div class="note-card" data-note="2">
+      <div class="note-number">02</div>
+      <h3>CSS Grid vs Flexbox</h3>
+      <p>A practical guide: when to reach for Grid and when Flexbox alone is enough for the job.</p>
+      <a class="btn-link" href="#" onclick="openNote(event,2)">Read <i class="fa-solid fa-book-open" style="font-size:11px"></i></a>
     </div>
-
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="60">
-      <h3>JavaScript</h3>
-      <p>DOM, events, promises, arrays, objects</p>
+    <div class="note-card" data-note="3">
+      <div class="note-number">03</div>
+      <h3>JS DOM Basics &amp; Array Methods</h3>
+      <p>Events, selectors, and real-world examples of map, filter and reduce all in one note.</p>
+      <a class="btn-link" href="#" onclick="openNote(event,3)">Read <i class="fa-solid fa-book-open" style="font-size:11px"></i></a>
     </div>
+  </div>
 
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="60">
-      <h3>Node.js</h3>
-      <p>Basic backend, server concepts, APIs</p>
+  <!-- NOTE MODAL -->
+  <div id="noteModal" class="note-modal-overlay" onclick="closeNoteOnOverlay(event)">
+    <div class="note-modal">
+      <button class="note-modal-close" onclick="closeNote()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="note-modal-header">
+        <img src="site.jpg" alt="Sakshi Rana" class="note-author-img" id="noteAuthorImg" />
+        <div>
+          <span class="note-modal-tag">My Notes</span>
+          <h2 id="noteModalTitle"></h2>
+        </div>
+      </div>
+      <div id="noteModalBody" class="note-modal-body"></div>
     </div>
-
   </div>
 </section>
 
-  <!-- projects  -->
-  <section id="works" class="section-block">
-    <h2 data-aos="fade-up" data-aos-duration="900">my projects </h2>
-
-    <div class="cards" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-      <div class="card">
-        <h3>Zomato-Clone</h3>
-        <p>Food delivery UI with filtering.</p>
-        <a class="btn-link" href="https://sr2219947-ctrl.github.io/java-script/zomato/Project_zom" target="_blank" rel="noopener">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>Quote Generator</h3>
-        <p>Generates random quotes with a simple UI.</p>
-        <a class="btn-link" href="https://sr2219947-ctrl.github.io/java-script/11_Quotes/" target="_blank" rel="noopener">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>Olympic Countdown Timer</h3>
-        <p>Countdown timer for the Olympic Games using HTML, CSS and JavaScript.</p>
-        <a class="btn-link" href="https://sr2219947-ctrl.github.io/java-script/08_Olympic/
-   " target="_blank" rel="noopener">View Project</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTES / BLOG -->
-  <section id="notes" class="section-block">
-    <h2 data-aos="fade-up" data-aos-duration="900">Notes</h2>
-
-    <div class="cards" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-      <div class="card">
-        <h3>How I build responsive websites</h3>
-        <p>My process to make websites mobile-friendly using CSS and layout techniques.</p>
-        <a class="btn-link" href="#" target="_blank" rel="noopener">Read</a>
-      </div>
-
-      <div class="card">
-        <h3>CSS Grid vs Flexbox</h3>
-        <p>When to use Grid and when Flexbox is enough.</p>
-        <a class="btn-link" href="#" target="_blank" rel="noopener">Read</a>
-      </div>
-
-      <div class="card">
-        <h3>JavaScript DOM Basics/ Array Methods</h3>
-        <p>Simple DOM examples to understand events and selectors/Practiced map, filter and reduce with real examples..</p>
-        <a class="btn-link" href="#" target="_blank" rel="noopener">Read</a>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact" class="section-block">
-    <h2 data-aos="fade-up" data-aos-duration="900">Contact</h2>
-
-    <div class="contact-wrap" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <span class="section-tag">Let's Talk</span>
+    </div>
+    <div class="contact-wrap">
       <div class="contact-info">
-        <p><i class="fa-regular fa-envelope"></i> sr2219947@gmail.com</p>
-        <p><i class="fa-brands fa-github"></i> github.com/username</p>
-        <p><i class="fa-brands fa-x-twitter"></i> Linkdin.com/username</p>
+        <div style="margin-bottom:8px">
+          <h3 style="font-size:18px;margin-bottom:6px">Let's connect 👋</h3>
+          <p style="color:var(--text);font-size:14px;line-height:1.6">I'm always open to learning, collaborating and
+            exploring new opportunities.</p>
+        </div>
+        <div class="contact-info-row">
+          <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+          <span>sr2219947@gmail.com</span>
+        </div>
+        <div class="contact-info-row">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <span>github.com/sr2219947-ctrl</span>
+        </div>
+        <div class="contact-info-row">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <span>linkedin.com/in/sakshi-rana</span>
+        </div>
       </div>
-
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submitted (demo)');">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <input type="text" placeholder="Subject" />
         <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" id="submitBtn">
+          Send Message <i class="fa-solid fa-paper-plane" style="font-size:13px;margin-left:6px"></i>
+        </button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Sakshi Rana. All rights reserved.</p>
+  <footer>
+    <p>© 2026 <span>Sakshi Rana</span>. All rights reserved.</p>
+    <p>Built with <span>♥</span> HTML · CSS · JavaScript</p>
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+  <script src="script.js"></script>
 </body>
+
 </html>
